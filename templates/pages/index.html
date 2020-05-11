@@ -1,0 +1,70 @@
+{% extends 'base3.html' %} {% block content %}
+
+<section class="landing">
+  <div class="dark-overlay">
+    <div class="landing-inner">
+      <h1 class="x-large">Booking</h1>
+      <form action="/search" class="form form-reversion">
+        <div class="type">
+          <label for="type">Type of Room</label>
+          <select name="type" id="">
+            <option value="room">Room</option>
+            <option value="hall">Hall</option>
+          </select>
+        </div>
+        <div class="check-in-date">
+          <label for="checkin-date">Check in Date</label>
+          <input type="date" name="check_in_date" id="" />
+        </div>
+        <div class="check-out-date">
+          <label for="checkin-date">Check out Date</label>
+          <input type="date" name="check_out_date" id="" />
+        </div>
+        <div class="adult">
+          <label for="adult">Number of aldut</label>
+          <select name="adult" id="">
+            <option value="1">1 adult</option>
+            <option value="2">2 adult</option>
+            <option value="3">3 adult</option>
+            <option value="4">4 adult</option>
+            <option value="5">5 adult</option>
+            <option value="6">6 adult</option>
+            <option value="7">7 adult</option>
+            <option value="8">8 adult</option>
+          </select>
+        </div>
+        <div class="children">
+          <label for="children">Number of children</label>
+          <select name="children" id="">
+            <option value="1">1 children</option>
+            <option value="2">2 children</option>
+            <option value="3">3 children</option>
+            <option value="4">4 children</option>
+            <option value="5">5 children</option>
+            <option value="6">6 children</option>
+            <option value="7">7 children</option>
+            <option value="8">8 children</option>
+          </select>
+        </div>
+        <div class="rooms">
+          <label for="rooms">Number of rooms</label>
+          <select name="rooms" id="">
+            <option value="1">1 rooms</option>
+            <option value="2">2 rooms</option>
+            <option value="3">3 rooms</option>
+            <option value="4">4 rooms</option>
+            <option value="5">5 rooms</option>
+            <option value="6">6 rooms</option>
+            <option value="7">7 rooms</option>
+            <option value="8">8 rooms</option>
+          </select>
+        </div>
+        <input type="submit" value="Find" class="submit btn btn-primary" />
+        <p class="my-1 register">
+          Don't have a account? <a href="Register.html">Register</a>
+        </p>
+      </form>
+    </div>
+  </div>
+</section>
+{% endblock %}

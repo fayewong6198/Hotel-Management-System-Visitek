@@ -1,0 +1,25 @@
+{% extends 'base.html' %} {% block content %}
+<div class="room-list">
+  {% if rooms is not None %}
+  <h1 class="large text-primary">{{rooms_length}} rooms found</h1>
+  {% for room in rooms %}
+  <div class="room-card">
+    <div><img src="{{ room.images.first }}" alt="" /></div>
+    <div class="info">
+      <h2 class="text-primary">Room ID {{room.room_id}}</h2>
+      <small>{{room.description|truncatewords:30}}</small>
+    </div>
+    <div class="rating">
+      <h1>9.0</h1>
+      <small>123 people give rating</small>
+      <a href="{% url 'room' room.id %}" class="btn btn-primary"
+        >More details</a
+      >
+      <a class="btn btn-success">Reversion</a>
+    </div>
+  </div>
+  {% endfor %} {% else %}
+  <h1 class="large text-primary">No room found</h1>
+  {% endif %}
+</div>
+{% endblock %}

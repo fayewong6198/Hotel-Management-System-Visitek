@@ -1,0 +1,55 @@
+{% extends 'base.html' %} {% load static %} {% block content %}
+<div class="room-info">
+  <h1 class="large text-primary">Room ID {{room.room_id}}</h1>
+  <img src="{{room.images.first}}" alt="" />
+  <div class="description">
+    <div>
+      {{room.description}}
+    </div>
+
+    <div class="rating">
+      <h1>{{room.price}}$</h1>
+      <small>123 people give rating</small>
+
+      <a class="btn btn-success">Reversion</a>
+    </div>
+    <div class="comment">
+      <form class="form" action="">
+        <div class="form-group">
+          <textarea
+            name="comment"
+            id=""
+            rows="5"
+            placeholder="Give your comment"
+          ></textarea>
+        </div>
+        <input type="submit" value="comment" class="btn btn-primary" />
+      </form>
+      <div class="comment-item">
+        <div class="user">
+          <img src="{% static 'img/room.jpg' %}" alt="" /><a href=""
+            ><strong>Jing Tian</strong></a
+          >
+        </div>
+        <div class="text">
+          <p>
+            Lorem ipsum dolor, sit amet consectetur adipisicing elit. Animi odio
+            repellendus aspernatur sapiente nobis dolore cum in accusantium
+            reprehenderit, facere dolorum ab, velit harum, esse porro suscipit
+            exercitationem beatae sit?
+          </p>
+          <small>01/01/2020 at 12h25p </small>
+          <div class="like">
+            <button class="btn">
+              <i class="fas fa-thumbs-up text-primary"></i> 4
+            </button>
+            <button class="btn">
+              <i class="fas fa-thumbs-down text-danger"></i> 4
+            </button>
+          </div>
+        </div>
+      </div>
+    </div>
+  </div>
+</div>
+{% endblock %}

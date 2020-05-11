@@ -1,0 +1,65 @@
+<div>
+  <h2 class="text-primary">Search</h2>
+  <form action="/search" class="form form-reversion">
+    <div class="type">
+      <label for="type"><small>Type of Room</small> </label>
+      <select name="type" id="">
+        <option value="room">Room</option>
+        <option value="hall">Hall</option>
+      </select>
+    </div>
+    <div class="check-in-date">
+      <label for="check_in_date"><small>Check in Date</small></label>
+      <input type="date" name="check_in_date" id="" value="{{check_in_date}}" />
+    </div>
+    <div class="check-out-date">
+      <label for="check_out_date"><small>Check out Date</small></label>
+      <input
+        type="date"
+        name="check_out_date"
+        id=""
+        value="{{check_out_date}}"
+      />
+    </div>
+    <div class="adult">
+      <label for="adult"><small>Number of aldut</small></label>
+      <select name="adult" id="">
+        <option value="lte1">1 adults</option>
+        <option value="lte2">2 adults</option>
+        <option value="lte3">3 adults</option>
+        <option value="lte4">4 adults</option>
+        <option value="lte5">5 adults</option>
+        <option value="lte6">6 adults</option>
+        <option value="lte7">7 adults</option>
+        <option value="lte8">8 adults</option>
+      </select>
+    </div>
+    <div class="children">
+      <label for="children"><small>Number of children</small></label>
+      <select name="children" id="">
+        <option value="lte1">1 children</option>
+        <option value="lte2">2 children</option>
+        <option value="lte3">3 children</option>
+        <option value="lte4">4 children</option>
+        <option value="lte5">5 children</option>
+        <option value="lte6">6 children</option>
+        <option value="lte7">7 children</option>
+        <option value="lte8">8 children</option>
+      </select>
+    </div>
+    <div class="rooms">
+      <label for="rooms"><small>Number of rooms</small></label>
+      <select name="rooms" id="">
+        <option value="1">1 rooms</option>
+        <option value="2">2 rooms</option>
+        <option value="3">3 rooms</option>
+        <option value="4">4 rooms</option>
+        <option value="5">5 rooms</option>
+        <option value="6">6 rooms</option>
+        <option value="7">7 rooms</option>
+        <option value="8">8 rooms</option>
+      </select>
+    </div>
+    <input type="submit" value="Find" class="btn btn-primary" />
+  </form>
+</div>
